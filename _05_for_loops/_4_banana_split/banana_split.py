@@ -18,12 +18,20 @@ root = tk.Tk()
 canvas = tk.Canvas(root, width=200, height=200, bg="#FF00FF");
 canvas.grid()
 
-'''
+"""""
 Text Rendering Example:
-                    x    y                                                       
-canvas.create_text(100, 50, text="text goes here", font=("Arial", 16))
-'''
+                    x    y  
+                    
+canvas.create_text(100, 100, text="text goes here", font=("Arial", 16))
+"""
 # Put your code below
+y = 60
+word = "Ice Cream"
+for i in range (4):
+    if i==3:
+        word="banana"
+    canvas.create_text(100,y , text=word, font=("Arial", 16))
+    y=y+20
 
 
 root.mainloop()
